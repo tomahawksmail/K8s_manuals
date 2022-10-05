@@ -63,3 +63,14 @@ helm list
 ```sh
 helm status
 ```
+
+Создать пространство имен demo и запустить манифест:
+```sh
+kubectl create namespace demo
+kubectl apply --namespace demo -f k8s/resourcequota.yaml
+```
+
+Чтобы проверить, активирован ли ресурс ResourceQuotas в конкретном пространстве имен, используйте команду:
+```sh
+kubectl get resourcequotas
+```
