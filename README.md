@@ -64,6 +64,17 @@ helm list
 helm status
 ```
 
+Вывести пространства имен:
+```sh
+kubectl get namespaces
+```
+
+Получить список pod-оболочек в пространстве имен prod:
+```sh
+kubectl get pods --namespace prod
+kubectl get pods -n prod
+```
+
 Создать пространство имен demo и запустить манифест:
 ```sh
 kubectl create namespace demo
