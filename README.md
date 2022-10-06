@@ -85,3 +85,24 @@ kubectl apply --namespace demo -f k8s/resourcequota.yaml
 ```sh
 kubectl get resourcequotas
 ```
+
+Вывести контексты и в каком контексте сейчас находимся:
+```sh
+kubectl config get-contexts
+kubectl config current-context
+```
+
+Переключить контекст:
+```sh
+kubectl config use-context gke
+```
+
+Создать новый контекст:
+```sh
+kubectl config set-context myapp --cluster=gke --namespace=myapp
+```
+
+Вывести информацию о кластере в текущем контексте:
+```sh
+kubectl cluster-info
+```
